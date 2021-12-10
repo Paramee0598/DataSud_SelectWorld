@@ -126,18 +126,18 @@ def Check():
     if ch2 == 1:
         Label(text="select Animal").pack()
         print('run file Animal')
-        Input('Animal')
-    ch3 = CarBrandName.get()
+        Input('Animals')
+    ch3 = BodyParts.get()
     if ch3 == 1:
         Label(text="select BodyParts").pack()
         print('run file BodyParts')
         Input('BodyParts')
-    ch4 = CarID_Model.get()
+    ch4 = Colors.get()
     if ch4 == 1:
         Label(text="select Colors").pack()
         print('run file Colors')
         Input('Colors')
-    ch5 = CarModel.get()
+    ch5 = Sport.get()
     if ch5 == 1:
         Label(text="select Sport").pack()
         print('run file Sport')
@@ -152,7 +152,7 @@ def Check():
         Label(text="select Fruits").pack()
         print('run file Fruits')
         Input('Fruits')
-    ch8 = Laptop.get()
+    ch8 = ThaiFood.get()
     if ch8 == 1:
         Label(text="select ThaiFood").pack()
         print('run file ThaiFood')
@@ -163,16 +163,16 @@ Adjective = IntVar()
 Checkbutton(text = "Adjective",variable = Adjective).pack(anchor =W)
 
 Animal = IntVar()
-Checkbutton(text = "Animal",variable = Animal).pack(anchor =W)
+Checkbutton(text = "Animals",variable = Animal).pack(anchor =W)
 
-CarBrandName = IntVar()
-Checkbutton(text = "BodyParts", variable = CarBrandName).pack(anchor =W)
+BodyParts = IntVar()
+Checkbutton(text = "BodyParts", variable = BodyParts).pack(anchor =W)
 
-CarID_Model = IntVar()
-Checkbutton(text = "Colors",variable = CarID_Model).pack(anchor =W)
+Colors = IntVar()
+Checkbutton(text = "Colors", variable = Colors).pack(anchor =W)
 
-CarModel = IntVar()
-Checkbutton(text = "Sport",variable = CarModel).pack(anchor =W)
+Sport = IntVar()
+Checkbutton(text = "Sport", variable = Sport).pack(anchor =W)
 
 Country = IntVar()
 Checkbutton(text = "Country",variable = Country).pack(anchor =W)
@@ -180,8 +180,8 @@ Checkbutton(text = "Country",variable = Country).pack(anchor =W)
 Fruits = IntVar()
 Checkbutton(text = "Fruits",variable = Fruits).pack(anchor =W)
 
-Laptop = IntVar()
-Checkbutton(text = "ThaiFood สุดกาว",variable = Laptop).pack(anchor =W)
+ThaiFood = IntVar()
+Checkbutton(text = "ThaiFood สุดกาว", variable = ThaiFood).pack(anchor =W)
 
 
 Button(text="เลือกไรมา" , command = Check).pack(anchor = W)
@@ -190,7 +190,6 @@ Button(text="เลือกไรมา" , command = Check).pack(anchor = W)
 #กล่องข้อความ
 root.geometry("500x500+0+0")
 root.mainloop()
-
 
 
 
