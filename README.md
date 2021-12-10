@@ -16,3 +16,7 @@ fix world
    
 All word in folder Data_Warehouse
 
+##update 10/12/2564
+
+   add function clearListWorld
+   add clear.csvFile
