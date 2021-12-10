@@ -21,8 +21,11 @@ def ConvertString(string):
     tolist[:0]=string
     return tolist
 
+
+
+csvFiles = []      #************ update 10/12/2564
 def worldSearch(inpFileName):
-    csvFiles = []
+    
     for file in glob.glob('DataWorld/AllWorld/*.csv'):
         directory = file.replace('DataWorld/AllWorld\\', '')
         directory =directory.replace('.csv', '')
@@ -73,6 +76,7 @@ d = MyQueue()
 def Input(group):
     fileName = group
     asyncio.run(worldSelect(d, worldSearch(fileName)))
+    csvFiles.clear()   #***************************************** update 10/12/2564
 
 #---------------------------------------------------------------------------------------------
 
@@ -96,8 +100,14 @@ def showWorld():
         print('Word is empty')
    #print(type(asyncio.run(getWorld(d))))
 
+
+
+def clearListWord(): #************** update 10/12/2564
+    while d.empty() is False:    #************** update 10/12/2564
+     d.get_nowait()   #************** update 10/12/2564
 #ปุ่ม
 bth1 = Button(root,text="กด",fg ="white",bg = 'blue' ,command = showWorld).pack()
+bth2 = Button(root,text="clear",fg ="white",bg = 'blue' ,command = clearListWord ).pack() #************** update 10/12/2564
 
 
 
